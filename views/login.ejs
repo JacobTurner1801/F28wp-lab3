@@ -1,10 +1,17 @@
 <%-include("header")-%>
-<form action="../controllers/clientController.js" method="get">
+<form method="get">
     <p>Username: </p>
     <input size="10" type="text">
     <br>
     <p>Password: </p>
     <input size="10" type="text">
     <br>
+    
+    
     <input type="submit" value="Submit">
+    <br>
 </form>
+
+<p>Don't have an account? <a href="register.ejs">register here</p>
+<br>
+<%-include("footer")-%>

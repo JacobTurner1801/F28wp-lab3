@@ -45,6 +45,7 @@ const registerControl = (request, response) => {
     let phone = request.body.phone;
     let fax = request.body.fax;
     let max_outstanding = request.body.max_outstanding;
+    // may or may not need c
     let client = new Client(username, password, 0, society, contact, addres, zipcode, city, phone, fax, max_outstanding);
 
     clientServices.registerService(client, function(err, exists, insertedID) {
@@ -60,7 +61,6 @@ const registerControl = (request, response) => {
         response.end();
     });
 };
-
 
 const getClients = (request, response) => {
     const clientServices = require('../services/clientServices');
