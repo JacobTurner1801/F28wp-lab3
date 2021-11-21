@@ -1,5 +1,5 @@
 const express = require("express");
-
+const session = require("express-session");
 const app = express();
 // use public directory
 app.use(express.static("public"));
@@ -19,6 +19,8 @@ app.get("/register", (req, res) => {
 app.get("/login", (req, res) => {
     res.render("login");
 });
+
+app.use(session({secret:""}));
 
 const router = require("./routes/apis");
 app.use(router);
