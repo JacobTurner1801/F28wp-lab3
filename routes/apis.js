@@ -8,7 +8,7 @@ const router = express.Router();
 //-----------------------------------------------
 //route for listing all products
 router.get('/api/catalog', productController.getCatalogue);
-router.get('/api/article/:id', productController.getProductByID);
+router.get('/api/article/:reference', productController.getProductByID);
 router.post('/api/login', clientController.loginControl);
 router.post('/api/register', clientController.registerControl);
 //export router

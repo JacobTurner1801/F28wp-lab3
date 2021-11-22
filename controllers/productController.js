@@ -1,7 +1,7 @@
 const getCatalogue = (request, response) => {
     const catalogServices = require('../services/productServices');
     catalogServices.searchService(function(err, rows) {
-        response.render("catalog", {products: rows});
+        response.render("catalog", { products: rows });
     });
 };
 
@@ -9,8 +9,8 @@ const getProductByID = (request, response) => {
     const catalogServices = require('../services/productServices');
     let reference = request.params.reference;
     catalogServices.searchIDService(reference, function(err, rows) {
-        response.json(rows);
-        response.end();
+        console.log("HERE ARE ROWS\n" + rows);
+        response.render("article", { article: rows })
     });
 };
 

@@ -20,7 +20,7 @@ app.get("/login", (req, res) => {
     res.render("login");
 });
 
-app.use(session({secret:""}));
+app.use(session({secret:"hello"}));
 
 const router = require("./routes/apis");
 app.use(router);

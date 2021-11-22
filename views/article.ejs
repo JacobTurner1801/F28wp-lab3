@@ -5,23 +5,19 @@
         <thead>
             <tr>
                 <th>Name</th>
-                <th scope="col">Reference</th>
                 <th scope="col">Category</th>
                 <th scope="col">Price</th>
                 <th scope="col">Stock</th>
+                <th scope="col">Critical Stock</th>
             </tr>
         </thead>
         <tbody>
-            <% articles.forEach(article => { %>
+            <%  %>
                 <tr>
                     <th scope="row">
                         <%= article.name %>
                     </th>
-                    <td>
-                        <a href="/api/article/<%= article.reference %>">
-                            <%= article.reference %>
-                        </a>
-                    </td>
+
                     <td>
                         <%= article.category %>
                     </td>
@@ -35,7 +31,7 @@
                         <%= article.critical_stock %>
                     </td>
                 </tr>
-                <% }) %>
+                <% %>
         </tbody>
     </table>
 </div>
